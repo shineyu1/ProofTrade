@@ -1,0 +1,37 @@
+{
+  "name": "prooftrade",
+  "version": "1.0.0",
+  "description": "ProofTrade trust layer core for AI trading agents",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "tsc",
+    "evaluate": "tsx src/cli.ts evaluate",
+    "execute": "tsx src/cli.ts execute",
+    "submit": "tsx src/cli.ts submit",
+    "guard": "tsx scripts/run-runtime-guard.ts",
+    "replay": "tsx scripts/simulate-shadow-evaluation.ts",
+    "audit": "tsx scripts/generate-audit-report.ts",
+    "openclaw": "tsx scripts/run-openclaw-workflow.ts",
+    "xlayer:account": "tsx scripts/show-xlayer-account.ts",
+    "deploy:xlayer": "tsx scripts/deploy-xlayer.ts",
+    "publish:xlayer": "tsx scripts/publish-xlayer.ts",
+    "test": "node --import tsx --test test/**/*.test.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "okx-trade-cli": "^1.2.4",
+    "solc": "^0.8.34",
+    "viem": "^2.47.4",
+    "zod": "^4.3.6"
+  }
+}

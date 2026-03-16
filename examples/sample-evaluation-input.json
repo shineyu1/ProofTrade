@@ -1,0 +1,71 @@
+{
+  "payload": {
+    "schema_version": "1.0.0",
+    "agent_id": "prooftrade-agent-001",
+    "decision_id": "dec_20260315_0001",
+    "timestamp": "2026-03-15T14:30:00Z",
+    "market_context": {
+      "venue": "okx-cex",
+      "market_type": "spot",
+      "symbol": "BTC-USDT",
+      "last_price": 84250.5,
+      "timeframe": "15m"
+    },
+    "portfolio_context": {
+      "account_mode": "demo",
+      "base_currency": "USDT",
+      "available_balance": 10000,
+      "current_positions": []
+    },
+    "decision": {
+      "intent_type": "long",
+      "side": "buy",
+      "size_rule": {
+        "mode": "percent_balance",
+        "value": 5
+      },
+      "entry_condition": "market_now",
+      "stop_loss_rule": {
+        "mode": "percent",
+        "value": 1.5
+      },
+      "take_profit_rule": {
+        "mode": "percent",
+        "value": 2
+      },
+      "time_horizon": "4h",
+      "confidence_score": 0.71,
+      "no_trade_allowed": true
+    },
+    "policy_ref": {
+      "policy_version": "v1",
+      "policy_hash": "policy_hash_v1",
+      "prompt_hash": "prompt_hash_v1"
+    },
+    "rationale": {
+      "summary": "Momentum continuation with controlled risk.",
+      "rationale_hash": "rationale_hash_0001"
+    },
+    "evaluation": {
+      "window_sec": 14400,
+      "success_metric": "risk_adjusted_return"
+    }
+  },
+  "policy": {
+    "required_stop_loss": true,
+    "max_size_pct_balance": 10,
+    "allowed_symbols": ["BTC-USDT", "ETH-USDT"],
+    "allowed_market_types": ["spot"],
+    "max_license_level": "L3"
+  },
+  "commitment": {
+    "commitment_id": "commit_0001",
+    "commitment_hash": "8e49bb978139918f7cec2be830de115085f99e78637b4c348179726443795221",
+    "created_at": "2026-03-15T14:30:00Z",
+    "expires_at": "2026-03-15T18:30:00Z"
+  },
+  "outcome": {
+    "price_series": [84250.5, 84420, 84700, 85010, 85600, 85935],
+    "recent_same_symbol_decisions_last_hour": 2
+  }
+}

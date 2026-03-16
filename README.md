@@ -540,21 +540,3 @@ npm run openclaw -- submit examples/sample-evaluation-input.json --strategy mome
 
 ---
 
-## 推荐演示路径
-
-如果要让 Gemini 或人类评委在 2 分钟内看懂，最强路径是：
-
-1. 展示 Agent 当前是 `L2`
-2. 展示一次 `L2` 越权执行被拒
-3. 跑一轮 `shadow replay`
-4. 生成 `audit_report.json`
-5. 生成 `license_certificate.json`
-6. 展示 `L3` 下的 `spot algo` 放行
-7. 再展示运行中触发风控，被 Runtime Guard 降回 `L2` 或吊销
-
-这条路径能证明：
-
-- 系统真的会拒绝
-- 系统真的会升级
-- 系统真的会执行
-- 系统真的会撤销权限
